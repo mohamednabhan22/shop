@@ -1,0 +1,71 @@
+
+
+
+  
+  <mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>id</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.id  }}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>title</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.title }}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="body">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>body</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.body }} <button (click)="delete(element.id)" style="margin-left: 20px;">delete</button></mat-cell>
+    </ng-container>
+  
+    
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <div style="margin-left: -100px;" >
+  <mat-paginator [length]="7"
+  [pageSize]="10"
+  >
+  </mat-paginator>
+</div>
+
+
+<section>
+    <form class="text-center" [formGroup]="postForm"
+      (ngSubmit)="onSubmit()">
+      <div class="form-group">
+      <mat-form-field>
+        <input class="form-control"
+          type="number"
+          matInput
+          placeholder="write id"
+          formControlName="id">
+        <mat-hint>Please enter a valid email.</mat-hint>
+        <mat-error>Invalid or missing email.</mat-error>
+      </mat-form-field></div>
+      <div class="form-group">
+      <mat-form-field>
+        <input class="form-control"
+          type="text"
+          matInput
+          placeholder="write title"
+          formControlName="title">
+        <mat-hint>Please enter a valid email.</mat-hint>
+        <mat-error>Invalid or missing email.</mat-error>
+      </mat-form-field></div>
+      <div class="form-group">
+      <mat-form-field>
+        <input  class="form-control"
+          type="text"
+          matInput
+          placeholder=" write post"
+          formControlName="post">
+        <mat-hint>Please enter your password.</mat-hint>
+        <mat-error>Missing password.</mat-error>
+      </mat-form-field></div>
+      <button class="btn btn-primary" type="submit" mat-raised-button color="primary" [disabled]="postForm.invalid">update post</button>
+      <button  class="btn btn-success" (click)="addPost()" type="button" mat-raised-button color="primary" >add post</button>
+    </form>
+  </section>
+  

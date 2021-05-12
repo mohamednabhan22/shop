@@ -1,0 +1,54 @@
+.footer{
+    background-color: #0D5028;
+    padding-top: 60px;
+    color: white;
+}
+.footer img{
+    max-width: 100%;
+}
+.footer p{
+    font-size: 14px;
+    margin-top: 8px;
+}
+.footer ul li{
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.footer h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer input{
+    width: 250px;
+    border: none;
+    padding: 3px 5px 3px 5px;
+}
+.footer button{
+    background-color: #58BA47;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all .4s ease-in-out;
+    padding: 5px 0;
+margin-left: 4px;
+    width: 85px;
+    color: white;
+    border: none;
+}
+.footer button:hover{
+    background-color:transparent;
+    border: 2px solid  #58BA47;
+    color:  #58BA47;
+}
+.footer hr{
+    background-color: rgb(189, 182, 182);
+}
+.footer span{
+    margin-left: 20px;
+    display: inline-block;
+}
+.copy-right{
+    padding-bottom: 20px;
+}
+.footer i{
+    margin-left: 25px;
+}

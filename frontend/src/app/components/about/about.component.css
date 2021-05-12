@@ -1,0 +1,127 @@
+.about{
+    background-position: 118%;
+    padding-top: 124px;
+    color: white;
+    height: 572px;
+    background-image: url(../../../assets/homeBg.png);
+    }
+    .about h1{
+        font-size: 80px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .about p{
+        font-size: 17px;
+    }
+
+    /* start vision*/
+    .vision{
+        background-color: #0C8A44;
+        padding-top: 102px;
+        padding-bottom: 70px;
+        color: white;
+    }
+    .vision img{
+        max-width: 100%;
+    }
+    .vision-box{
+        margin-left: 70px;
+    }
+    .vision-box h1{
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .vision-box p{
+        font-size: 18px;
+    }
+    /* end vision*/
+
+    /* start value*/
+
+    .value{
+        margin-top: 60px;
+    }
+    .value h1{font-size: 60px;
+        margin-bottom: 65px;
+        font-size: 60px;
+        color: black;
+        font-weight: bold;
+        text-shadow: 5px 50px 3px #d6d2d2;
+    }
+    .value-box{
+       
+        padding: 40px 15px 45px 30px;
+        margin-bottom: 4px;
+    }
+    .value-box h4{
+        font-size: 25px;
+        color: #58BA47;
+        font-weight: bold;
+        margin-top: 29px  ;
+    }
+    
+    .value-box p{
+        font-size: 12px;
+        color: gray;
+    }
+   
+    .value-box img{
+        width: 40px;
+    
+    }
+        /* end value*/
+
+            /* start redefine*/
+
+    .redfine{
+        background-image: url(../../../assets/s.png);
+        padding-top: 75px;
+        text-align: left;
+        padding-left: 70px;
+    background-position: center;
+    height: 346px;
+    color: white;
+    }
+    .redfine h2{
+     font-size: 55px;   
+    }
+    .redfine p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 30px;
+        color: black;
+    }
+        /* end redefine*/
+
+            /* start succes*/
+
+    .success h1 ,.success h2{
+        font-size: 60px;position: relative;
+        font-weight: bold;
+        margin-top: 101px;
+    }
+    .success h1::after{
+        position: absolute;
+        top: 40px;
+        left: -30px;
+        font-size: 90px;
+        content: 'Our success partners';
+        color: #e2dbdb;
+    }
+    .success img{
+        max-width: 100%;
+        margin-top: 86px;
+        margin-bottom: 30px;
+    }
+        /* end succes*/
+
+    
+    
+    /* start media queries*/
+    
+    @media screen and (max-width:992px){
+        .success h1::after{display: none !important;}
+        .redfine h2{
+            font-size: 37px;
+        }
+    }

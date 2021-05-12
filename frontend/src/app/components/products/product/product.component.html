@@ -1,0 +1,27 @@
+<div class="product">
+<div class="row">
+    <div class="col-md-4"><img style="max-width: 100%; " src="../../../assets/{{product.img}}" alt="productImg"></div>
+   
+<div style="margin-left: 0px;" class="col-md-4"><div class="info">
+    <h2>{{product.name}}</h2>
+    <h3>Description</h3>
+    <p>{{product.description }}.</p>
+
+<h5 style="margin-top: 28px;">Product Info</h5>
+<p>price :$ {{product.price}}</p>
+<p>Product ID :  {{product._id}}</p>
+<p>Category : {{product.category}}</p>
+
+</div>
+</div>
+<div *ngIf="isLoged&&!isAdmin" class="col-md-3"> <div class="price">
+    <span>Quantity</span><h2 class="head">     {{quantity}}</h2>
+     <br> <span>total</span><h2 class="head">   {{total}}</h2>  
+<div class="buttons">
+    <button class="btn btn-success s" (click)="AddToCart(product.name,product.price,1,product._id)">Add to cart</button> <br>
+    <button (click)="removeFromCart()"  class="btn btn-warning" >Remove from cart</button>
+<button  class="btn btn-dark" routerLink="/products">Continue shopping</button>
+</div></div>
+</div>
+
+</div></div>

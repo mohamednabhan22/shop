@@ -1,0 +1,117 @@
+<div class="info">
+  <div class="container">
+    <div class="info-Box">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="box">
+            <h1 [class.mb-5]="!togleShow">{{ "homeTitle1" | translate }}</h1>
+            <p>{{ "homeDesc" | translate }}</p>
+            <button>{{ "viewWork" | translate }}</button>
+            <img *ngIf="togleShow" src="../../../assets/blog/Clip.png" alt="" />
+          </div>
+        </div>
+
+        <div class="col-lg-5 c">
+          <div class="box-2">
+            <h2 [class.mb-3]="!togleShow">{{ "homeTitle1" | translate }}</h2>
+            <button>{{ "orderNow" | translate }}</button>
+          </div>
+          <div class="box-2">
+            <h2 [class.mb-3]="!togleShow">{{ "homeTitle1" | translate }}</h2>
+            <button>{{ "orderNow" | translate }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <h2>{{ "serviceTitle" | translate }}</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sevice-box">
+            <img src="../../../assets/Group 154.png" alt="" />
+            <h4 class="pb-3">{{ "servicet41" | translate }}</h4>
+            <p>{{ "serviceD41" | translate }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="sevice-box">
+            <img src="../../../assets/Group 141.png" alt="" />
+            <h4 class="pb-3">{{ "servicet42" | translate }}</h4>
+            <p>{{ "serviceD41" | translate }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="sevice-box">
+            <img src="../../../assets/Group 160.png" alt="" />
+            <h4 class="pb-3">{{ "servicet43" | translate }}</h4>
+            <p>{{ "serviceD41" | translate }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="sevice-box">
+            <img src="../../../assets/Group 147.png" alt="" />
+            <h4 class="last pb-3">{{ "servicet44" | translate }}</h4>
+            <p [class.pb-3]="!togleShow">{{ "serviceD41" | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="products text-center">
+  <div class="container">
+  <h2> {{'products'|translate}}
+  </h2>
+  <ul class="d-flex flex-column flex-lg-row list-unstyled">
+          <li (click)="this.products=this.filterProducts; this.selectedCatogry=0;this.selectedPrice=0" >All </li>
+
+      <li (click)="filter(catogry.name)"  *ngFor="let catogry of catogries">{{catogry.name}} </li>
+    
+      <li><select [(ngModel)]="selectedCatogry" (change)="filterByCatogry()" name="catogry" >
+          <option disabled  value="0">catogry</option>
+
+          <option *ngFor="let catogry of catogries" value="{{catogry.name}}">{{catogry.name}}</option>
+        
+
+      </select></li>
+      <li><select [(ngModel)]="selectedPrice"  (change)="filterByPrice() "name="price" >
+          <option disabled value="0">price</option>
+          <option *ngFor="let price of prices" value="{{price}}">{{price}}</option>
+
+      </select></li>
+
+  </ul>
+  <div class="row">
+      <div class="col-md-3 product"*ngFor="let product of products| slice:0:count;index as i">
+          <div class="product-box">
+<img src="../../../assets/{{product.img}}" alt="">
+<h5>{{product.name}}</h5>
+<h5>price $ {{product.price}}</h5>
+<button *ngIf="isLoged&&!isAdmin" class="btn b" (click)="AddToCart(product.name,product.price,1,product.id)">{{'Add-to-cart'|translate}}</button> 
+<button class="btn btn-primary s" routerLink="/products/{{product.id}}">{{'more info'|translate}}</button>
+<button *ngIf="isAdmin" (click)="deleteProduct(i,product.id)" class="btn btn-warning s">delete product</button>
+
+      </div></div>
+    
+     
+  </div>
+  <button *ngIf="count<16&&this.selectedCatogry==0&&this.selectedPrice==0&&filterProducts.length==products.length" (click)="count=products.length" class="mx-auto">{{'serviceBoxB'|translate}}</button>
+</div></div>
+<div class="material d-flex align-items-center">
+  <div class="container">
+    <h1>{{ "materialT" | translate }}</h1>
+    <p>nebo</p>
+  </div>
+</div>
+
+
+<div class="success">
+  <div class="container">
+    <h1 *ngIf="togleShow">{{ "successT4" | translate }}</h1>
+    <h2 *ngIf="!togleShow">{{ "successT4" | translate }}</h2>
+    <div class="photos">
+      <img src="../../../assets/New folder/Group 27.png" alt="" />
+    </div>
+  </div>
+</div>

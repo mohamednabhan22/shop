@@ -1,0 +1,32 @@
+
+
+<div style="margin-top:200px" class="container text-center product">
+
+
+    <h3  class="my-5">Add Product</h3>
+    <form   enctype="multipart/form-data"  #Form="ngForm" (ngSubmit)="addProduct(Form)">
+        <input   ngModel #name="ngModel"  type="name" class="form-control mb-3" name="name" placeholder="name  " required >
+      <div class="alert alert-danger"*ngIf="name.touched && name.errors?.required"> name is required</div>
+      
+
+      
+        <input  ngModel #price="ngModel"  type="number" class="form-control mb-3" name="price" placeholder="Price" required>
+        <div class="alert alert-danger"*ngIf="price.touched && price.errors?.required"> price is required</div>
+
+        <textarea ngModel #description="ngModel" type="text" class="form-control mb-3" name="description" placeholder="Description"required></textarea>
+        <div class="alert alert-danger"*ngIf="description.touched && description.errors?.required"> description is required</div>
+
+        <select  ngModel #category="ngModel"   class="form-control mb-3" name="category" required>
+            <option value="" selected>Choose a category</option>
+            <option *ngFor="let catogry of catogries" [value]="catogry.name">{{catogry.name}}</option>
+
+        </select>
+        <div class="alert alert-danger"*ngIf="category.touched && category.errors?.required"> category is required</div>
+
+      
+        <input  (change)="handleFileInput($event.target.files)" ngModel type="file" class="form-control" name="img" placeholder="Image">
+    
+        <input  type="submit" value="Add Product" class="btn btn-primary m-5">
+    </form>
+</div>
+

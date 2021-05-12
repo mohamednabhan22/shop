@@ -1,0 +1,65 @@
+.contact{
+    background-position: 118%;
+    padding-top: 124px;
+    color: white;
+    height: 572px;
+    background-image: url(../../../assets/homeBg.png);
+    
+}
+.contact h2{
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 56px;
+    color: white;
+}
+.contact p{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 66px;
+}
+.box h5{
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+
+}
+.box p{
+    font-size: 20px;
+}
+.form{
+    margin: 140px 0;
+}   
+.form img{
+    max-width: 100%;
+}
+.contact-box{
+    margin-left: 30px;
+}
+.contact-box h2{
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+.box2{
+    margin-left: 67px;
+    width: 200px;
+}
+
+textarea{
+    height: 150px;
+}
+.form button{
+    font-size: 16px;
+    font-weight: bold;
+    width: 140px;
+    background-color: #58BA47;
+    color: white;
+    border: none;
+    transition: all .4s ease-in-out;
+    padding: 7px 0;
+}
+.form button:hover{
+    background-color: white;
+    color:#58BA47 ;
+    border: 1px solid #58BA47;
+}

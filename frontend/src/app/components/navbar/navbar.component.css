@@ -1,0 +1,60 @@
+nav{
+    background-color: #0D5028;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+.navbar-toggler-icon{
+    background-color: white;
+    margin-bottom: 4px !important; 
+    display: block;
+    height: 2px;
+}
+.navbar-toggler{padding: 10px;}
+.navbar-brand img{
+    width: 66%;
+}
+.px{
+padding: 0 38px !important;
+}
+.nav-link{
+    color: white;
+    font-size: 16px;
+    margin-left: 30px;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color:#58BA47;
+}
+.login h4{
+    color: white;
+    margin-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.login img{
+    width: 40%;
+    height: 20%;
+    margin-top: 10%;
+    margin-right: 24px;
+}
+.login button{
+    font-size: 16px;
+    background-color: #58BA47;
+    padding: 4px 25px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    transition: background .4s ease-in-out;
+
+}
+.login button:hover{
+    background-color: transparent;
+    color: #58BA47;
+    border: 1px solid #58BA47 ;
+}
+@media screen and (max-width:990px){
+    .login{margin-top: 2%;}
+    .login img{width: 7%;margin-top:2%;}
+    .login button{width:30% !important;height: 30%;margin-top: 2%;}
+}

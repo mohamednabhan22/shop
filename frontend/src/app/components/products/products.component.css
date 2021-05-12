@@ -1,0 +1,135 @@
+.product-box{
+    text-align: center;
+    padding: 10px;margin-bottom: 10px;
+       border: 1px solid #E2E2E2;
+   }
+   .products h2{
+       font-size: 50px;
+       margin-top: 100px;
+       font-weight: bold;
+   }
+   
+   .product-box img{
+      max-width: 100%;
+      margin-bottom: 30px;
+   }
+ button.more{
+     margin-bottom: 20px;
+ }
+   
+   .products ul{
+       margin-top: 40px;
+   }
+   .products ul li{
+       font-size: 16px;
+      margin-bottom: 4px;
+       margin-left: 24px;
+       font-weight: bold;
+       padding: 10px 15px 10px 15px;
+       transition: all .4s ease-in-out;
+   
+   }
+   
+   .products ul li.active,.products ul li:hover{
+       background-color: #58BA47;
+       color: white;
+       cursor: pointer;
+   }
+   .product-box p{
+       font-size: 20px;
+   }
+   .product-box h5{
+       font-size: 24px;
+       font-weight: bold;
+       color: #58BA47;
+   }
+   .products button{
+       margin-top: 30px;
+       background-color: #58BA47;
+       color: white;
+       font-size: 18px;
+       font-weight: bold;
+       width: 178px;
+       padding: 7px 0;
+       border: none;
+       transition: all .4s ease-in-out;
+   }
+   .product-box img{
+    margin-bottom: 40px;
+    height: 147px;
+   }
+   .products button.s{
+    margin-top: 20px;
+    background-color: rgb(63 63 191);
+    padding: 7px 0;
+    margin-bottom: 10px;
+}
+   .products button:hover{background-color: white;color: #58BA47;
+   border: 1px solid #58BA47;
+   }
+   select{
+       width: 160px;
+       padding: 3px;
+   }
+    li:last-of-type:hover,li:nth-of-type(9):hover{
+       background-color: white !important;
+   }
+ 
+
+/* start media queries*/
+
+   @media screen and (min-width:768px) and (max-width:992px){
+.special-box img{
+    height: 341px;
+
+}
+.product-box {
+    margin-bottom: 10px;
+    margin-left: 22px;
+    text-align: left;
+    min-width: 360px;
+}
+
+.product-box img {
+    width: 150px;}
+
+    
+.products button {
+     width: 134px;
+    display: block;
+
+}
+
+.product-box h5:first-of-type {
+    margin-top: 8px;
+    
+}
+
+
+.product-box h5:last-of-type {
+ 
+    margin-top: 29px;
+   
+}
+   }
+
+   @media screen and (max-width:768px){
+    .product-box button {
+        margin-bottom: 20px;   
+    }
+    .product-box h5{
+        margin-bottom: 19px;
+    }
+    .products button.s {
+     
+        display: block;
+        margin-top: 0;
+        margin-left: 153px;
+    }
+  .product-box img{
+      margin-bottom: 30;
+  }
+
+}
+
+

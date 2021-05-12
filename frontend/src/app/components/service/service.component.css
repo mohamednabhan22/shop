@@ -1,0 +1,101 @@
+.service img,.furn img{
+    max-width: 100%;
+}
+.service h1{
+    font-size: 70px;
+    margin-top: 150px;
+
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.service h3,.furn h2{
+    font-size: 38px;
+    color: #58BA47;
+    font-weight: bold;
+}
+.service p,.furn p{
+    font-size: 16px;
+}
+.service button,.im button,.furn button{
+    color: white;
+    border: none;
+    font-size: 18px;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+    width: 140px;
+    padding: 5px ;
+    background-color: #58BA47;
+}
+.service button:hover,.im button:hover,.furn button:hover{
+    background-color: white;
+    border: 2px solid  #58BA47;
+    color:  #58BA47;
+}
+.service img.s{vertical-align: middle;
+    max-width: 100%;
+    position: relative;
+    top: 25%;}
+.im{
+    background: #0D5028;
+    position: relative;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+}
+.sp{
+    position: absolute;
+    top: -12%;
+   
+    height: 119%;
+    left: 55%;
+}
+.sp2{position: absolute;
+    top: 20%;
+    left: 62%;
+    height: 53%;
+    width: 17%;
+}
+.im h2{
+    font-size: 40px;
+    color: #58BA47;
+}
+.im p{
+    font-size: 16px;
+    color: white;
+}
+.furn{
+    padding-top: 100px;
+}
+.furn-box{
+    height: 350px;
+    position: relative;
+    background-color: #3ED34A;
+    width: 63%;
+}
+.furn-box img{
+    position: absolute;
+    left: 32%;
+    top: 53px;
+    width: 91%;
+}
+
+.dd{
+    margin-top: 60px;
+}
+
+@media screen and (max-width:768px) {
+.sp, .sp2,img.s{display: none;}
+.service{
+    padding-bottom: 30px;
+}
+.service h3, .furn h2 {
+    margin: 23px 0;
+}
+.furn-box{
+    margin-bottom: 50px;
+}
+.im h2 {
+    margin: 29px 0;
+   }
+}

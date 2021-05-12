@@ -1,0 +1,29 @@
+<div class="signup">
+<div class="container text-center">
+    <h3>Create Account</h3>
+    <form #Form="ngForm" (ngSubmit)="signup(Form)">
+        <input  ngModel type="text" class="form-control" name="username" #username="ngModel" placeholder="Username" required>
+        <div class="alert alert-danger"*ngIf="username.touched && username.errors?.required"> Name is required</div>
+           
+       
+        <input   ngModel #email="ngModel"  type="email" class="form-control" name="email" placeholder="E-mail  " required email>
+        <div class="alert alert-danger"*ngIf="email.touched && email.errors?.required"> email is required</div>
+        <div class="alert alert-danger"*ngIf="email.touched && email.errors?.email"> Enter a valid email address
+        </div>
+
+       
+        <input  ngModel #password="ngModel"   type="password" class="form-control" name="password" placeholder="Password " required>
+        <div class="alert alert-danger"*ngIf="password.touched && password.errors?.required"> password is required</div>
+
+        <input   ngModel #confirmPassword="ngModel"  type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required>
+        <div class="alert alert-danger"*ngIf="confirmPassword.touched && confirmPassword.errors?.required"> confirmPassword is required</div>
+        <div  class="alert alert-danger"*ngIf="confirmPassword.touched&&password!=confirmPassword  ">  Passwords doesnot match        </div>
+
+        <input   ngModel type="submit" value="Create Account" class="btn btn-primary">
+    </form>
+    
+    <br>
+    
+</div>
+
+</div>
